@@ -1,24 +1,25 @@
 {
-  "name": "loopstudios-landing-page",
-  "version": "1.0.0",
-  "description": "![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon index"
-  },
-  "author": "Assadi",
-  "license": "ISC",
-  "dependencies": {
-    "chokidar": "^3.5.2",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.13",
-    "nunjucks": "^3.2.3"
-  },
-  "nodemonConfig": {
-    "ext": "html,twig,js,njs,css"
-  },
-  "devDependencies": {
-    "dotenv": "^10.0.0"
-  }
+    "name": "loopstudios-landing-page",
+    "version": "1.0.0",
+    "description": "![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "nodemon index",
+        "build": "npm run build"
+    },
+    "author": "Assadi",
+    "license": "ISC",
+    "dependencies": {
+        "chokidar": "^3.5.2",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.13",
+        "nunjucks": "^3.2.3"
+    },
+    "nodemonConfig": {
+        "ext": "html,twig,js,njs,css"
+    },
+    "devDependencies": {
+        "dotenv": "^10.0.0"
+    }
 }
