@@ -1,0 +1,44 @@
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+
+/**Fonts**/
+
+@font-face {
+    font-family: "Alata";
+    src: url("../fonts/Alata/Alata-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/Josefin_Sans/static/JosefinSans-Thin.ttf") format("truetype");
+}
+
+body {
+    width: 100%;
+    color: var(--Black);
+    font-size: 1rem;
+    font-family: "Alata";
+    color: var(--Black);
+}
+
+.wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
