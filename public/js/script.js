@@ -1,5 +1,7 @@
 import "../css/index.css";
 import "../css/style.css";
+import "../images/logo.svg";
+import "../images/desktop/image-interactive.jpg";
 import axios from "axios";
 import { generate_desktop_card, generate_mobile_card } from "./functions";
 
