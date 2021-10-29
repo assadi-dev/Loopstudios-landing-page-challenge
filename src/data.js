@@ -1,4 +1,4 @@
-const creations_data = [{
+exports.creations = [{
         title: "Deep Earth",
         link: "/public/images/desktop/image-deep-earth.jpg",
     },
@@ -28,8 +28,6 @@ const creations_data = [{
         link: "/public/images/desktop/image-fisheye.jpg",
     },
 ];
-
-exports.creations = Object.values(creations_data);
 
 exports.creation_mobileVersion = [
     { title: "Deep Earth", link: "/public/images/mobile/image-deep-earth.jpg" },

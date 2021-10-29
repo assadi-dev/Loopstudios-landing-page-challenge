@@ -103,7 +103,17 @@
           <div id="creation-container">
             <!--Card desktop item here -->
             {% for creation in creations %}
-            <p>{{creation.title}}</p>
+            <div class="grid-creation">
+              <a href="#">
+                <img
+                  class="creation-image"
+                  src="{{creation.link}}"
+                  alt="{{creation.title}}"
+                />
+                <div class="overlay"></div>
+                <h2 class="creation-title">{{creation.title}}</h2>
+              </a>
+            </div>
             {% endfor %}
           </div>
         </div>
