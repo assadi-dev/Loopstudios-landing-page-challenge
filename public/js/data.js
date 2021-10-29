@@ -1,31 +1,40 @@
+import deepEart from "../images/desktop/image-deep-earth.jpg";
+import nightArcade from "../images/desktop/image-night-arcade.jpg";
+import soccerTeamVR from "../images/desktop/image-soccer-team.jpg";
+import theGrid from "../images/desktop/image-grid.jpg";
+import fromUpaboveVR from "../images/desktop/image-from-above.jpg";
+import pocketBrealis from "../images/desktop/image-pocket-borealis.jpg";
+import theCuriosity from "../images/desktop/image-curiosity.jpg";
+import makeItFisheye from "../images/desktop/image-fisheye.jpg";
+
 export const creations = [{
         title: "Deep Earth",
-        link: "/public/images/desktop/image-deep-earth.jpg",
+        link: deepEart,
     },
     {
         title: "Night Arcade",
-        link: "/public/images/desktop/image-night-arcade.jpg",
+        link: nightArcade,
     },
     {
         title: "Soccer Team VR",
-        link: "/public/images/desktop/image-soccer-team.jpg",
+        link: soccerTeamVR,
     },
-    { title: "The Grid", link: "/public/images/desktop/image-grid.jpg" },
+    { title: "The Grid", link: theGrid },
     {
         title: "From up Above VR",
-        link: "/public/images/desktop/image-from-above.jpg",
+        link: fromUpaboveVR,
     },
     {
         title: "Pocket Brealis",
-        link: "/public/images/desktop/image-pocket-borealis.jpg",
+        link: pocketBrealis,
     },
     {
         title: "The Curiosity",
-        link: "/public/images/desktop/image-curiosity.jpg",
+        link: theCuriosity,
     },
     {
         title: "Make it Fisheye",
-        link: "/public/images/desktop/image-fisheye.jpg",
+        link: makeItFisheye,
     },
 ];
 
