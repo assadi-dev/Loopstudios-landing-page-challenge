@@ -102,6 +102,9 @@
           </div>
           <div id="creation-container">
             <!--Card desktop item here -->
+            {% for creation in creations %}
+            <p>{{creation.title}}</p>
+            {% endfor %}
           </div>
         </div>
       </section>
