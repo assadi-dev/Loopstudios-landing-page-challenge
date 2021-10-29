@@ -7,18 +7,19 @@ const nunjucks = require("nunjucks");
 
 const PORT = process.env.PORT || 3000;
 
-app.use("/public", express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "dist")));
 nunjucks.configure("public", {
     autoescape: true,
     express: app,
 });
+app.use("/public", express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 
 //static page
 
 app.get("/", function(_, res) {
     //res.sendFile(path.join(__dirname, "/dist/index.html"));
-    res.render("index.html", { test: "coucou" });
+
+    res.render("index.html", { test: "coucous" });
 });
 
 app.get("/api/creations", function(req, res) {

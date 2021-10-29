@@ -26,9 +26,6 @@
         "ext": "html,js,njs,css"
     },
     "devDependencies": {
-        "@babel/cli": "^7.15.7",
-        "@babel/core": "^7.15.8",
-        "@babel/preset-env": "^7.15.8",
         "css-loader": "^6.5.0",
         "dotenv": "^10.0.0",
         "html-webpack-plugin": "^5.5.0",
