@@ -5,8 +5,10 @@
     "main": "index.js",
     "scripts": {
         "server": "nodemon index",
-        "start": "node index.js",
-        "build": "npm start"
+        "start": "webpack serve",
+        "dev": "webpack --mode development",
+        "dev-server": "webpack --mode developement watch",
+        "build": "webpack --mode production"
     },
     "author": "Assadi",
     "license": "ISC",
@@ -20,6 +22,12 @@
         "ext": "html,twig,js,njs,css"
     },
     "devDependencies": {
-        "dotenv": "^10.0.0"
+        "css-loader": "^6.5.0",
+        "dotenv": "^10.0.0",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.60.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.4.0"
     }
 }
