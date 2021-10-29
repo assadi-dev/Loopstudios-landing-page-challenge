@@ -4,6 +4,7 @@ import "../css/style.css";
 import "../images/logo.svg";
 import "../images/desktop/image-interactive.jpg";
 import { creations, creations_mobileVersion } from "./data";
+const axios = require("axios");
 
 const creation_title = document.querySelectorAll(".creation-title");
 
@@ -72,7 +73,9 @@ const url_creation = `${window.location.protocol}//${window.location.host}/api/c
 
 /** desktop version */
 
-generate_desktop_card(url_creation);
+axios.get(url_creation).then(function(response) {
+    generate_desktop_card(response.data);
+});
 
 /** mobile version */
 generate_mobile_card(creations_mobileVersion);
