@@ -1,9 +1,9 @@
+const axios = require("axios");
+import { generate_desktop_card, generate_mobile_card } from "./functions";
 import "../css/index.css";
 import "../css/style.css";
 import "../images/logo.svg";
 import "../images/desktop/image-interactive.jpg";
-import axios from "axios";
-import { generate_desktop_card, generate_mobile_card } from "./functions";
 
 const creation_title = document.querySelectorAll(".creation-title");
 

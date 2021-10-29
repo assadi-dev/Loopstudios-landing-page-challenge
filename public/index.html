@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -102,6 +102,17 @@
           </div>
           <div id="creation-container">
             <!--Card desktop item here -->
+            {% for creation in creations %}
+            <div class="grid-creation">
+              <a href="" rel="noreferrer noopener">
+                <img
+                  class="creation-image"
+                  src="{{creation.link}}"
+                  alt="{{creation.title}}"
+                />
+              </a>
+            </div>
+            {% endfor %}
           </div>
         </div>
       </section>
