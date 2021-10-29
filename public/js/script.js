@@ -1,9 +1,9 @@
-import axios from "axios";
 import { generate_desktop_card, generate_mobile_card } from "./functions";
 import "../css/index.css";
 import "../css/style.css";
 import "../images/logo.svg";
 import "../images/desktop/image-interactive.jpg";
+import { creations, creations_mobileVersion } from "./data";
 
 const creation_title = document.querySelectorAll(".creation-title");
 
@@ -71,11 +71,8 @@ const url_mobile_creation = `${window.location.protocol}//${window.location.host
 const url_creation = `${window.location.protocol}//${window.location.host}/api/creations`;
 
 /** desktop version */
-axios.get(url_creation).then(function(res) {
-    generate_desktop_card(res.data);
-});
+
+generate_desktop_card(creations);
 
 /** mobile version */
-axios.get(url_mobile_creation).then(function(res) {
-    generate_mobile_card(res.data);
-});
+generate_mobile_card(creations_mobileVersion);
