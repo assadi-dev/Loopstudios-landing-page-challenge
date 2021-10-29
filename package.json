@@ -9,6 +9,9 @@
         "dev": "webpack --mode development --watch",
         "build": "webpack --mode production"
     },
+    "engines": {
+        "node": "14.x"
+    },
     "author": "Assadi",
     "license": "ISC",
     "dependencies": {
