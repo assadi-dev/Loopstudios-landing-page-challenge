@@ -72,7 +72,7 @@ const url_creation = `${window.location.protocol}//${window.location.host}/api/c
 
 /** desktop version */
 
-generate_desktop_card(creations);
+generate_desktop_card(url_creation);
 
 /** mobile version */
 generate_mobile_card(creations_mobileVersion);
