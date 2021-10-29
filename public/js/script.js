@@ -1,8 +1,3 @@
-import "../css/index.css";
-import "../css/style.css";
-import "../images/logo.svg";
-import "../images/desktop/image-interactive.jpg";
-
 const creation_title = document.querySelectorAll(".creation-title");
 
 const textStyle_creation = (text) => {
