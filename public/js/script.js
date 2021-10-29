@@ -1,6 +1,7 @@
 import "../css/index.css";
 import "../css/style.css";
 import axios from "axios";
+import { generate_desktop_card, generate_mobile_card } from "./functions";
 
 const creation_title = document.querySelectorAll(".creation-title");
 
@@ -69,51 +70,10 @@ const url_creation = `${window.location.protocol}//${window.location.host}/api/c
 
 /** desktop version */
 axios.get(url_creation).then(function(res) {
-    Object(res.data).map(function(data) {
-        const card = document.createElement("div");
-        card.classList.add("grid-creation");
-        const a = document.createElement("a");
-        const preview = document.createElement("img");
-        const title = document.createElement("h2");
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
-        title.classList.add("creation-title");
-        preview.classList.add("creation-image");
-        preview.src = data.link;
-        preview.alt = data.title;
-        a.setAttribute("rel", "noopener noreferrer");
-        a.href = "#";
-        a.appendChild(preview);
-        a.appendChild(overlay);
-        a.appendChild(title);
-        title.innerHTML = data.title;
-        card.appendChild(a);
-        document.querySelector("#creation-container").appendChild(card);
-    });
+    generate_desktop_card(res.data);
 });
 
 /** mobile version */
 axios.get(url_mobile_creation).then(function(res) {
-    Object(res.data).map(function(data) {
-        const card = document.createElement("li");
-        card.classList.add("creation-item-mobile");
-
-        const a = document.createElement("a");
-        const preview = document.createElement("img");
-        const title = document.createElement("h2");
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
-        title.classList.add("creation-title");
-        preview.classList.add("creation-image-mobile");
-        preview.src = data.link;
-        preview.alt = data.title;
-        a.setAttribute("rel", "noopener noreferrer");
-        a.href = "#";
-        a.appendChild(preview);
-        a.appendChild(overlay);
-        a.appendChild(title);
-        title.innerHTML = data.title;
-        card.appendChild(a);
-        document.querySelector("#creation-container-mobile").appendChild(card);
-    });
+    generate_mobile_card(res.data);
 });
