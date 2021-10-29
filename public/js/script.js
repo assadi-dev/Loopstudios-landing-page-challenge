@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 import { generate_desktop_card, generate_mobile_card } from "./functions";
 import "../css/index.css";
 import "../css/style.css";

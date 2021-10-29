@@ -8,11 +8,12 @@ const nunjucks = require("nunjucks");
 const PORT = process.env.PORT || 3000;
 
 app.use("/public", express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 
 //static page
 
 app.get("/", function(_, res) {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
+    res.sendFile(path.join(__dirname, "/dist/index.html"));
 });
 
 nunjucks.configure("public", {
