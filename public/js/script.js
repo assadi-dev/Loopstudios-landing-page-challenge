@@ -1,10 +1,7 @@
-import { generate_desktop_card, generate_mobile_card } from "./functions";
 import "../css/index.css";
 import "../css/style.css";
 import "../images/logo.svg";
 import "../images/desktop/image-interactive.jpg";
-import { creations, creations_mobileVersion } from "./data";
-const axios = require("axios");
 
 const creation_title = document.querySelectorAll(".creation-title");
 
@@ -65,17 +62,3 @@ navLink.forEach((link) => {
         close();
     });
 });
-
-//load creation
-
-const url_mobile_creation = `${window.location.protocol}//${window.location.host}/api/mobile-creations`;
-const url_creation = `${window.location.protocol}//${window.location.host}/api/creations`;
-
-/** desktop version */
-
-axios.get(url_creation).then(function(response) {
-    generate_desktop_card(response.data);
-});
-
-/** mobile version */
-generate_mobile_card(creations_mobileVersion);

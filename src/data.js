@@ -1,4 +1,4 @@
-exports.creations = [{
+const desktop = [{
         title: "Deep Earth",
         link: "/public/images/desktop/image-deep-earth.jpg",
     },
@@ -29,7 +29,7 @@ exports.creations = [{
     },
 ];
 
-exports.creation_mobileVersion = [
+const mobile = [
     { title: "Deep Earth", link: "/public/images/mobile/image-deep-earth.jpg" },
     {
         title: "Night Arcade",
@@ -57,3 +57,5 @@ exports.creation_mobileVersion = [
         link: "/public/images/mobile/image-fisheye.jpg",
     },
 ];
+
+module.exports = { desktop, mobile };

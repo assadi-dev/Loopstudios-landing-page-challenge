@@ -97,14 +97,27 @@
 
             <ul id="creation-container-mobile">
               <!--Card mobile item here -->
+              {% for creation in mobile %}
+              <li class="creation-item-mobile">
+                <a href="#" rel="noopener noreferrer">
+                  <img
+                    class="creation-image-mobile"
+                    src="{{creation.link}}"
+                    alt="{{creation.title}}"
+                  />
+                  <div class="overlay"></div>
+                  <h2 class="creation-title">{{creation.title}}</h2>
+                </a>
+              </li>
+              {% endfor %}
             </ul>
             <button id="seeAll-btn">See All</button>
           </div>
           <div id="creation-container">
             <!--Card desktop item here -->
-            {% for creation in creations %}
+            {% for creation in desktop %}
             <div class="grid-creation">
-              <a href="#">
+              <a href="#" rel="noopener noreferrer">
                 <img
                   class="creation-image"
                   src="{{creation.link}}"
