@@ -5,7 +5,7 @@ require("dotenv").config();
 const path = require("path");
 const nunjucks = require("nunjucks");
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 app.use("/public", express.static(path.join(__dirname, "public")));
 //static page
