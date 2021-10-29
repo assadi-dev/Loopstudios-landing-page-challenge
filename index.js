@@ -10,7 +10,6 @@ const PORT = process.env.PORT || 3000;
 app.use("/public", express.static(path.join(__dirname, "public")));
 //static page
 app.use(express.static("dist"));
-
 app.get("/api/creations", function(req, res) {
     const creation = [{
             title: "Deep Earth",
