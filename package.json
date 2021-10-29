@@ -19,7 +19,7 @@
         "nunjucks": "^3.2.3"
     },
     "nodemonConfig": {
-        "ext": "html,twig,js,njs,css"
+        "ext": "html,js,css"
     },
     "devDependencies": {
         "css-loader": "^6.5.0",
