@@ -8,7 +8,7 @@
         "start": "node index",
         "dev": "webpack --mode development --watch",
         "heroku-postbuild": "npm install && npm run build",
-        "build": "babel index.js -d dist"
+        "build": "webpack --mode production"
     },
     "engines": {
         "node": "14.x"
