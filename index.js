@@ -11,7 +11,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 //static page
 app.use(express.static(path.join(__dirname, "dist")));
 
-app.get("/", function(req, res) {
+app.get("/", function(_, res) {
     res.sendFile(path.join(__dirname, "./dist/index.html"));
     if (err) {
         res.status(500).json("Error");
