@@ -5,10 +5,7 @@
     "main": "index.js",
     "scripts": {
         "server": "nodemon index",
-        "start": "node index",
-        "dev": "webpack --mode development --watch",
-        "heroku-postbuild": "npm install && npm run build",
-        "build": "webpack --mode production"
+        "start": "node index"
     },
     "engines": {
         "node": "14.x"
@@ -28,10 +25,6 @@
     "devDependencies": {
         "css-loader": "^6.5.0",
         "dotenv": "^10.0.0",
-        "html-webpack-plugin": "^5.5.0",
-        "style-loader": "^3.3.1",
-        "webpack": "^5.60.0",
-        "webpack-cli": "^4.9.1",
-        "webpack-dev-server": "^4.4.0"
+        "style-loader": "^3.3.1"
     }
 }
