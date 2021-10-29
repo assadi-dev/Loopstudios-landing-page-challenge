@@ -1,5 +1,6 @@
 import "../css/index.css";
 import "../css/style.css";
+import axios from "axios";
 
 const creation_title = document.querySelectorAll(".creation-title");
 
@@ -58,5 +59,61 @@ toogleBtn.addEventListener("click", function() {
 navLink.forEach((link) => {
     link.addEventListener("click", function() {
         close();
+    });
+});
+
+//load creation
+
+const url_mobile_creation = `${window.location.protocol}//${window.location.host}/api/mobile-creations`;
+const url_creation = `${window.location.protocol}//${window.location.host}/api/creations`;
+
+/** desktop version */
+axios.get(url_creation).then(function(res) {
+    Object(res.data).map(function(data) {
+        const card = document.createElement("div");
+        card.classList.add("grid-creation");
+        const a = document.createElement("a");
+        const preview = document.createElement("img");
+        const title = document.createElement("h2");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        title.classList.add("creation-title");
+        preview.classList.add("creation-image");
+        preview.src = data.link;
+        preview.alt = data.title;
+        a.setAttribute("rel", "noopener noreferrer");
+        a.href = "#";
+        a.appendChild(preview);
+        a.appendChild(overlay);
+        a.appendChild(title);
+        title.innerHTML = data.title;
+        card.appendChild(a);
+        document.querySelector("#creation-container").appendChild(card);
+    });
+});
+
+/** mobile version */
+axios.get(url_mobile_creation).then(function(res) {
+    Object(res.data).map(function(data) {
+        const card = document.createElement("li");
+        card.classList.add("creation-item-mobile");
+
+        const a = document.createElement("a");
+        const preview = document.createElement("img");
+        const title = document.createElement("h2");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        title.classList.add("creation-title");
+        preview.classList.add("creation-image-mobile");
+        preview.src = data.link;
+        preview.alt = data.title;
+        a.setAttribute("rel", "noopener noreferrer");
+        a.href = "#";
+        a.appendChild(preview);
+        a.appendChild(overlay);
+        a.appendChild(title);
+        title.innerHTML = data.title;
+        card.appendChild(a);
+        document.querySelector("#creation-container-mobile").appendChild(card);
     });
 });

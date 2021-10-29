@@ -5,14 +5,14 @@
     "main": "index.js",
     "scripts": {
         "server": "nodemon index",
-        "start": "webpack serve",
-        "dev": "webpack --mode development",
-        "dev-server": "webpack --mode developement watch",
+        "start": "node index",
+        "dev": "webpack --mode development --watch",
         "build": "webpack --mode production"
     },
     "author": "Assadi",
     "license": "ISC",
     "dependencies": {
+        "axios": "^0.24.0",
         "chokidar": "^3.5.2",
         "express": "^4.17.1",
         "nodemon": "^2.0.13",
