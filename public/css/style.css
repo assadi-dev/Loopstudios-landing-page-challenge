@@ -545,3 +545,12 @@ footer {
         max-width: 100%;
     }
 }
+
+@media screen and (max-height: 400px) {
+    .nav-item:first-child {
+        margin-top: 5%;
+    }
+    .nav-item a {
+        font-size: 1rem;
+    }
+}
