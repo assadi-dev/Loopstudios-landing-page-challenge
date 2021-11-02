@@ -1,6 +1,6 @@
 :root {
     --pt-1: 18px;
-    --max-size: 1444px
+    --max-size: 1444px;
 }
 
 .container {
@@ -146,7 +146,7 @@
 
 #section-one {
     position: relative;
-    padding: 2.5rem var(--pt-1)
+    padding: 2.5rem var(--pt-1);
 }
 
 #illustration-Container {
@@ -405,13 +405,13 @@ footer {
     color: var(--Dark-Gray);
 }
 
-@media screen and (max-width:1920px) {
+@media screen and (max-width: 1920px) {
     .container {
         max-width: 1142px;
     }
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
     .container {
         max-width: 980px;
     }
@@ -431,7 +431,7 @@ footer {
     }
 }
 
-@media screen and (max-width:990px) {
+@media screen and (max-width: 990px) {
     .container {
         width: 100%;
     }
@@ -514,7 +514,6 @@ footer {
         text-transform: uppercase;
         display: none;
         overflow-x: hidden;
-        max-height: 250px;
     }
     .nav-item:first-child {
         margin-top: 20%;
@@ -538,7 +537,7 @@ footer {
     }
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width: 780px) {
     #header-presentation h1 {
         font-size: 2.8rem;
     }
